@@ -3,7 +3,7 @@
 #include <juce_gui_basics/juce_gui_basics.h>
 #include "platform/choc_FileWatcher.h"
 
-class StyleSheet : public juce::ChangeBroadcaster
+class StyleSheet
 {
 public:
     StyleSheet(const juce::File& xmlFile, std::function<void()> onReload) : properties(xmlFile)
