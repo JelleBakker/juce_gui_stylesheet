@@ -13,9 +13,9 @@ public:
 
 private:
 #if JUCE_DEBUG
-    StyleSheet styleSheet { juce::File(__FILE__).getSiblingFile("StyleSheet.xml"), std::bind(&MainComponent::reload, this) };
+    const StyleSheet styleSheet { juce::File(__FILE__).getSiblingFile("StyleSheet.xml"), std::bind(&MainComponent::reload, this) };
 #else
-    StyleSheet styleSheet{BinaryData::StyleSheet_xml};
+    const StyleSheet styleSheet{BinaryData::StyleSheet_xml};
 #endif
 
     juce::TextButton button;

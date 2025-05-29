@@ -26,7 +26,7 @@ public:
                                                             });
     }
 
-    StyleSheet(const juce::String& xmlText) : properties(xmlText)
+    explicit StyleSheet(const juce::String& xmlText) : properties(xmlText)
     {
     }
 
@@ -50,7 +50,7 @@ public:
         int buttonHeight = tree["buttonHeight"];
     };
 
-    const Properties& getProperties()
+    const Properties& getProperties() const
     {
         return properties;
     }
